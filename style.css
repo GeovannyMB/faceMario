@@ -1,0 +1,599 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 5px;
+    background-color: white;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.137);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo img{
+    position: relative;
+    left: 50%;
+    width: 70px;
+}
+
+.search input{
+    position: relative;
+    left: 20%;
+    background-color: rgb(236, 236, 236);
+    border: none;
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.search input::placeholder{
+    position: relative;
+    top: 3px;
+    left: 34px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.349);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.search input:focus{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.search img{
+    position: absolute;
+    top: 33px;
+    left: 145px;
+    width: 23px;
+    z-index: 1;
+}
+
+.config img{
+    position: absolute;
+    top: 23px;
+    right: 1%;
+    background-color: rgb(236, 236, 236);
+    border-radius: 50%;
+    padding: 5px;
+    width: 30px;
+}
+
+.icons{
+    display: flex;
+    position: absolute;
+    top: 30px;
+    left: 33%;
+}
+
+.icons img{
+    width: 30px;
+    margin: 0;
+    padding: 0 40px 18px 40px;
+}
+
+.icons img:hover{
+    border-bottom: solid rgb(255, 0, 0);
+    border-radius: 3px;
+}
+
+.side-left{
+    position: fixed;
+    top: 80px;
+    width: 20%;
+    height: 100vh;
+    border-right: solid 2px rgba(0, 0, 0, 0.137);
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    z-index: 0;
+    transition: .3s all;
+}
+
+.side-right{
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 20%;
+    height: 100vh;
+    border-left: solid 2px rgba(0, 0, 0, 0.137);
+    background-color: rgb(255, 255, 255);
+}
+
+.sugested{
+    display: flex;
+    flex-direction: column;
+}
+
+.sugested p:nth-child(1){
+    position: relative;
+    top: 20px;
+    left: 20px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.sugested .group{
+    position: relative;
+    bottom: 20px;
+}
+
+.sugested .group #imgone{
+    width: 90%;
+    border-radius: 10px 10px 0px 0px;
+    position: relative;
+    top: 4px;
+    left: 18px;
+    border: solid rgb(143, 141, 141);
+    border-width: 1px 1px 0px 1px;
+}
+
+.group .joined-group{
+    display: flex;
+    padding-bottom: 18px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.joined-group{
+    border: solid rgb(143, 141, 141);
+    border-width: 0px 1px 1px 1px;
+    width: 90%;
+    margin: auto;
+}
+
+.img-face{
+    position: relative;
+    top: 8px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: solid 2px white;
+}
+
+.joined-group .imgone-face{
+    background-image: url(./assets/two-face.jpg);
+    position: relative;
+    left: 5px;
+    z-index: 999;
+}
+
+.joined-group .imgtwo-face{
+    background-image: url(./assets/luigi-face.jpg);
+    position: relative;
+    left: -3px;
+    z-index: 2;
+}
+
+.joined-group .imgthree-face{
+    background-image: url(./assets/toad-face.jpg);
+    position: relative;
+    left: -12px;
+}
+
+.joined-group p{
+    position: relative;
+    top: 18px;
+    left: 3px;
+    font-size: 11px;
+}
+
+.contacts p{
+    position: relative;
+    left: 20px;
+    font-weight: bold;
+}
+
+.contacts ul li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 20px;
+    padding-bottom: 10px;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+.contacts ul li:nth-child(2) img, .contacts ul li:nth-child(5) img, .contacts ul li:nth-child(8) img, .contacts ul li:nth-child(9) img{
+    border: solid 1.6px blue;
+    padding: 1.6px;
+}
+
+
+.contacts ul img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+main{
+    position: absolute;
+    top: 80px;
+}
+
+.stories{
+    display: flex;
+    width: 55%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.stories p:nth-child(2){
+    position: relative;
+    top: 2px;
+    left: 83%;
+    color: rgb(255, 0, 0);
+    font-size: 13px;
+}
+
+.stories p:nth-child(1){
+    position: relative;
+    left: 7.5%;
+}
+
+.img-storie{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    position: relative;
+    right: 34px;
+    top: 30px;
+}
+
+.stories .img{
+    width: 170px;
+    height: 250px;
+    background-color: red;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    box-shadow: 0px 8px 12px -9px;
+    transition: .3s all;
+}
+
+.stories .img:hover{
+    cursor: pointer;
+}
+
+.one{
+    background-image: url(./assets/one.jpg);
+    background-size: cover;
+    background-position: -50px;
+}
+
+.two{
+    background-image: url(./assets/two.jpg);
+    background-size: 450px;
+}
+
+.three{
+    background-image: url(./assets/three.png);
+    display: block;
+    background-size: cover;
+    background-position: center;
+}
+
+.four{
+    background-image: url(./assets/four.jpg);
+    display: block;
+    background-size: cover;
+    background-position: center;
+}
+
+.five{
+    background-image: url(./assets/five.jpg);
+    background-position: center;
+    display: block;
+    background-size: cover;
+}
+
+.img .name{
+    position: absolute;
+    top: 89%;
+    color: white;
+    font-weight: bold;
+}
+
+.img .img-profile{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 15px;
+    left: 7%;
+    border: solid 2px white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.img-one{
+    background-color: rgba(0, 0, 0, 0.561);
+    filter: blur(.8px);
+}
+
+.img-profile:hover{
+    cursor: pointer;
+}
+
+.soOMais{
+    position: relative;
+    top: -21px;
+    left: 14px;
+    font-size: 25px;
+    color: white;
+}
+
+.soOMais:hover{
+    cursor: pointer;
+}
+
+.img-two{
+    background-image: url(./assets/two-face.jpg);
+    background-size: contain;
+}
+
+.img-three{
+    background-image: url(./assets/luigi-face.jpg);
+    background-size: 100px;
+    background-position: -40px;
+}
+
+.img-four{
+    background-image: url(./assets/bowser-face.png);
+    background-size: 130px;
+    background-position: -40px;
+}
+
+.img-five{
+    background-image: url(./assets/toad-face.jpg);
+    background-size: 90px;
+    background-repeat: no-repeat;
+    background-position: -25px;
+}
+
+.option{
+    display: flex;
+    padding: 10px;
+}
+
+.option p:nth-child(1){
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    left: 10px;
+}
+
+.option p:nth-child(2){
+    position: relative;
+    top: 5px;
+    left: 72%;
+    font-size: 14px;
+    color: red;
+}
+
+.list-left{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    top: 1%;
+}
+
+.list-left ul{
+    list-style: none;
+    font-weight: bold;
+}
+
+.list-left ul li{
+    margin-bottom: 50px;
+}
+
+.list-left ul li:hover{
+    cursor: pointer;
+}
+
+.li{
+    display: flex;
+    text-align: center;
+}
+
+.li img{
+    position: relative;
+    bottom: 6px;
+    padding-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.li img:hover{
+    cursor: pointer;
+}
+
+.img-back img{
+    width: 60%;
+    position: relative;
+    bottom: 30px;
+    right: 49px;
+}
+
+.add-post{
+    display: flex;
+    width: 34.3%;    
+    margin: auto;
+    position: relative;
+    top: 80px;
+    padding: 10px;
+    box-shadow: 1px 1px 3px 0px rgb(155, 155, 155);
+    filter: blur(.3px);
+    border-radius: 4px;
+}
+
+.img-pf{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    background-color: rgb(143, 141, 141);
+    border-radius: 50%;
+}
+
+.twopost img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.add-post input{
+    background: none;
+    border: none;
+    position: relative;
+    top: 0px;
+    left: 28%;
+    text-align: center;
+    margin: 0;
+}
+
+.add-post input:focus{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.add-post input::placeholder{
+    font-weight: bold;
+}
+
+.add-post .i-img img{
+    width: 30px;
+    position: relative;
+    top: 15px;
+    left: 390px;
+}
+
+.img-pf img{
+    position: relative;
+    top: 9px;
+    left: 9px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.post{
+    width: 35%;    
+    margin: auto;
+    position: relative;
+    top: 140px;
+    border: solid rgb(155, 155, 155);
+    border-width: 1px 1px 0px 1px;
+    border-radius: 4px 4px 0px 0px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.post .info-profile{
+    display: flex;
+    position: relative;
+    top: 18px;
+    left: 18px;
+}
+
+.post .info-profile .name-profile p{
+    position: relative;
+    top: 12px;
+    left: 10px;
+}
+
+.post .info-profile .name-profile p:nth-child(1){
+    font-weight: bold;
+    color: black;
+}
+
+.post .info-profile .name-profile p:nth-child(2){
+    color: rgb(155, 155, 155);
+    font-size: 12px;
+}
+
+.post .info-profile .name-profile p:nth-child(2) img{
+    width: 12px;
+    padding-left: 2px;
+}
+
+.post .title-post{
+    position: relative;
+    top: 35px;
+    left: 25px;
+}
+
+.post .image-post img{
+    position: relative;
+    top: 55px;
+    width: 100%;
+}
+
+.reacao{
+    width: 35%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    position: relative;
+    top: 100px;
+    padding: 3px 0px 3px 0px;
+    border: solid rgb(155, 155, 155);
+    border-width: 1px;
+    border-radius: 0px 0px 4px 4px;
+}
+
+.curtidas{
+    width: 35%;
+    margin: auto;
+    display: flex;
+    position: relative;
+    top: 100px;
+    padding: 3px 0px 3px 0px;
+    border: solid rgb(155, 155, 155);
+    border-width: 1px 1px 0px 1px;
+    align-items: center;
+    padding: 8px 0px 8px 0px;
+}
+
+.curtidas .cc{
+    display: flex;
+    gap: 20px;
+    position: relative;
+    left: 40%;
+}
+.reacoes{
+    display: flex;
+    align-items: center;
+}
+
+.reacoes img{
+    width: 20px;
+}
+
+.reacoes img:nth-child(1){
+    position: relative;
+    left: 5px;
+    border: solid 1px white;
+    border-radius: 50%;
+}
+
+.reacao img{
+    width: 25px;
+}
+
+.curtir, .comentar, .compartilhar{
+    display: flex;
+    align-items: center;
+}
